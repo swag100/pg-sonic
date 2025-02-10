@@ -18,10 +18,10 @@ class PlayState(BaseState):
             object.handle_event(event)
 
     def tick(self, dt):
-        pass
+        for object in self.objects: object.tick(dt)
 
     def draw(self, surface):
-        surface.fill((0,0,0))
+        surface.fill((255,255,255))
 
         for object in self.objects:
             object.draw(surface)
